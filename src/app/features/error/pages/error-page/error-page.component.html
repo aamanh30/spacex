@@ -1,0 +1,14 @@
+<div class="width-100">
+    <div class="page-container text-center">
+        <h3 class="page-heading">{{ errorCode }}</h3>
+        <ng-container [ngSwitch]="errorCode">
+            <ng-container *ngSwitchCase="errorCodes.notFound">
+                <p>The Page You're Looking for is Not Found</p>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="errorCodes.forbidden">
+                <p>You don't have permission to view this page</p>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

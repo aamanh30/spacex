@@ -1,0 +1,54 @@
+<table class="table  white-bg">
+    <tbody>
+        <tr>
+            <td colspan="2">
+                <img [src]="program.links.mission_patch_small ? program.links.mission_patch_small : 'https://via.placeholder.com/256/256'" class="grey-bg" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="text-center">
+                <strong>{{ program.mission_name }} # {{ program.flight_number }}</strong>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <strong>Mission Ids</strong>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                {{ (program.mission_id.join(',') && program.mission_id.join(',').length) ? program.mission_id.join(',') : 'NA' }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <strong>Launch Year:</strong>
+            </td>
+            <td>
+                {{ program.launch_year }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <strong>Successful Launch:</strong>
+            </td>
+            <td>
+                {{ program.launch_success }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <strong>Successful Landing:</strong>
+            </td>
+            <td>
+                {{ program.landing_success? 'true' : 'false' }}
+            </td>
+        </tr>
+    </tbody>
+</table>

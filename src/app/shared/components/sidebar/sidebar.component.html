@@ -1,0 +1,31 @@
+<div class="sidebar-container white-bg">
+    <h3>Filters <span (click)="clearFilters()" title="Clear Filters">+</span></h3>
+
+    <div class="filters-wrapper">
+        <div class="filter-section text-center">
+            <p class="margin-0">Launch Year</p>
+            <span class="separator"></span>
+            <div class="width-100 display-grid">
+                <button *ngFor="let launchYear of filterConfig.launchYears" (click)="updateFilters(launchYear.filter, launchYear.value)" class="green-bg">{{ launchYear.label }}</button>
+            </div>
+        </div>
+
+        <div class="filter-section text-center">
+            <p class="margin-0">Successful Launch</p>
+            <span class="separator"></span>
+
+            <div class="width-100 display-inline-flex">
+                <button *ngFor="let launchSuccess of filterConfig.launchSuccess" (click)="updateFilters(launchSuccess.filter, launchSuccess.value)" class="green-bg">{{ launchSuccess.label }}</button>
+            </div>
+        </div>
+
+        <div class="filter-section text-center">
+            <p class="margin-0">Successful Landing</p>
+            <span class="separator"></span>
+
+            <div class="width-100 display-inline-flex">
+                <button *ngFor="let landSuccess of filterConfig.landSuccess" (click)="updateFilters(landSuccess.filter, landSuccess.value)" class="green-bg">{{ landSuccess.label }}</button>
+            </div>
+        </div>
+    </div>
+</div>
