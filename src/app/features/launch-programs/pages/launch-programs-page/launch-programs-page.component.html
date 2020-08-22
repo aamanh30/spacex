@@ -1,0 +1,9 @@
+<div [ngClass]="{'launch-program-wrapper' : launchProgramList.length, 'grid-wrapper': !launchProgramList.length }">
+    <div *ngFor="let launchProgram of launchProgramList" class="launch-program-card">
+        <app-launch-program-card [program]="launchProgram"></app-launch-program-card>
+    </div>
+
+    <div *ngIf="launchProgramList.length === 0" class="text-center">
+        <h4 class="page-heading">No Launch Programs found for the Selection</h4>
+    </div>
+</div>
